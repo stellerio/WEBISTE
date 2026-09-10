@@ -1,1 +1,3 @@
-import './styles.css'; import {createScene} from './scene/Scene'; import {setupScroll} from './animation/scroll'; import {setupNavigation} from './ui/navigation'; import {setupLoading} from './ui/loading'; const mount=document.querySelector<HTMLElement>('#webgl'); if(!mount) throw new Error('WebGL mount missing'); const scene=createScene(mount); setupScroll(scene); setupNavigation(); setupLoading(); scene.start();
+import './style.css';
+import { App } from './ui/App';
+new App().init().catch(console.error);

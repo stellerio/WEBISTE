@@ -1,1 +1,2 @@
-import { defineConfig } from 'vite'; export default defineConfig({base:'/WEBISTE/'});
+import { defineConfig } from 'vite';
+export default defineConfig({ base: '/WEBISTE/' });
