@@ -1,14 +1,1 @@
-import './style.css';
-import { createScene } from './scene/Scene';
-import { setupScroll } from './animation/scroll';
-import { setupNavigation } from './ui/navigation';
-import { setupLoading } from './ui/loading';
-
-const root = document.querySelector('#app');
-if (!root) throw new Error('App root not found');
-
-const scene = createScene(document.querySelector('#webgl') as HTMLElement);
-setupScroll(scene);
-setupNavigation();
-setupLoading();
-scene.start();
+varying vec3 vP;varying vec3 vN;void main(){vP=(modelMatrix*vec4(position,1.)).xyz;vN=normalize(normalMatrix*normal);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}

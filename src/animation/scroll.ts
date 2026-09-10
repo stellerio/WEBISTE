@@ -1,6 +1,1 @@
-import type { SceneController } from '../scene/Scene';
-
-export function setupScroll(scene: SceneController) {
-  const update = () => { const max = document.documentElement.scrollHeight - innerHeight; const p = max > 0 ? scrollY / max : 0; scene.setScroll(p); document.documentElement.style.setProperty('--scroll', String(p)); };
-  addEventListener('scroll', update, { passive: true }); update();
-}
+import {gsap} from 'gsap';import {ScrollTrigger} from 'gsap/ScrollTrigger';import type {SceneController} from '../scene/Scene';gsap.registerPlugin(ScrollTrigger);export function setupScroll(scene:SceneController){gsap.utils.toArray<HTMLElement>('.copy').forEach(el=>gsap.fromTo(el,{y:80,opacity:0},{y:0,opacity:1,duration:1.2,scrollTrigger:{trigger:el,start:'top 82%',end:'top 38%',scrub:1}}));ScrollTrigger.create({start:0,end:'max',onUpdate:x=>{scene.setScroll(x.progress);const p=document.querySelector<HTMLElement>('#progress');if(p)p.style.width=(x.progress*100)+'%';const c=document.querySelector<HTMLElement>('#counter');if(c)c.textContent=String(Math.min(5,Math.floor(x.progress*5)+1)).padStart(2,'0')+' / 05';}});}

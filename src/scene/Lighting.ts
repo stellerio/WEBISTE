@@ -1,0 +1,1 @@
+import * as THREE from 'three'; export function createLighting(s:THREE.Scene){s.add(new THREE.HemisphereLight('#d9efff','#06111e',2));const sun=new THREE.DirectionalLight('#fff',3.8);sun.position.set(-6,7,5);s.add(sun);const glow=new THREE.PointLight('#75cfff',18,28);glow.position.set(4,-2,7);s.add(glow);return{glow};}

@@ -1,5 +1,1 @@
-export function setupLoading() {
-  const loader = document.querySelector<HTMLElement>('#loading');
-  if (!loader) return;
-  requestAnimationFrame(() => setTimeout(() => loader.classList.add('done'), 900));
-}
+import {gsap} from 'gsap';export function setupLoading(){const l=document.querySelector<HTMLElement>('#loading');const v=document.querySelector<HTMLElement>('#load-value');let n=0;const tick=()=>{n=Math.min(100,n+Math.round(Math.random()*13+4));if(v)v.textContent=String(n).padStart(2,'0');if(n<100)setTimeout(tick,55);else gsap.to(l,{autoAlpha:0,duration:1,delay:.25,onComplete:()=>l?.remove()})};tick();}
