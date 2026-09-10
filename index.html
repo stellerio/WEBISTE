@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Cloud Atlas — An Immersive Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="webgl"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-dot"></span> CLOUD ATLAS</a>
+    <div class="progress"><span id="progressFill"></span></div>
+    <span class="chapter" id="chapterLabel">01 / 05</span>
+  </header>
+
+  <main id="top">
+    <section class="hero panel" data-chapter="01 / 05">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">A JOURNEY ABOVE THE WEATHER</p>
+        <h1 class="reveal">Look closer.<br><em>It’s alive.</em></h1>
+        <p class="lede reveal">Clouds look weightless from the ground. Up close, they are enormous moving worlds of water, ice, light and energy.</p>
+        <div class="scroll-cue reveal"><span></span> SCROLL TO EXPLORE</div>
+      </div>
+      <div class="hero-meta"><span>ATMOSPHERIC STUDY</span><span>01 — 05</span></div>
+    </section>
+
+    <section class="story panel" data-chapter="02 / 05">
+      <div class="story-card reveal">
+        <span class="number">01</span>
+        <p class="eyebrow">SCALE</p>
+        <h2>That cloud<br>is <em>bigger</em><br>than it looks.</h2>
+        <p>A single thunderstorm can rise many miles into the atmosphere. What appears like a small puff from the ground can be a vast three-dimensional structure stretching across the sky.</p>
+      </div>
+    </section>
+
+    <section class="story align-right panel" data-chapter="03 / 05">
+      <div class="story-card reveal">
+        <span class="number">02</span>
+        <p class="eyebrow">WATER</p>
+        <h2>Made from<br>millions of<br><em>tiny drops.</em></h2>
+        <p>Clouds form when moist air cools and water vapor condenses around microscopic particles. Those droplets and ice crystals scatter sunlight, creating the soft shapes we see.</p>
+      </div>
+    </section>
+
+    <section class="story panel" data-chapter="04 / 05">
+      <div class="story-card reveal">
+        <span class="number">03</span>
+        <p class="eyebrow">LIGHT</p>
+        <h2>White is only<br>the beginning<br>of the <em>story.</em></h2>
+        <p>The color and brightness of a cloud depend on its thickness, particle size and the angle of incoming light. At sunrise and sunset, the same cloud can become gold, pink, violet or deep blue.</p>
+      </div>
+    </section>
+
+    <section class="final panel" data-chapter="05 / 05">
+      <div class="final-copy reveal">
+        <p class="eyebrow">KEEP LOOKING UP</p>
+        <h2>The sky is<br>never <em>still.</em></h2>
+        <p>Clouds are part of a constantly changing atmospheric system. Their shapes are temporary signatures of wind, temperature, moisture and sunlight.</p>
+        <a class="restart" href="#top">RESTART JOURNEY <span>↗</span></a>
+      </div>
+      <div class="fact-pill">5 CHAPTERS · ONE MOVING SKY</div>
+    </section>
+  </main>
+
+  <div class="loading" id="loading"><div class="loader-mark">CA</div><p>BUILDING THE SKY <span id="loadPercent">0%</span></p></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
