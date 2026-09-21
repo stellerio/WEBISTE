@@ -1,0 +1,15 @@
+{
+  "bird": {
+    "type": "animal",
+    "related": ["wing", "flight"],
+    "explain": "Birds are animals that can fly using wings."
+  },
+  "flight": {
+    "related": ["lift", "movement"],
+    "explain": "Flight happens when forces like lift allow movement through air."
+  },
+  "gravity": {
+    "related": ["force", "mass", "earth"],
+    "explain": "Gravity is a force that attracts objects toward each other."
+  }
+}
