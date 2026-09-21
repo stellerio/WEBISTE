@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head><title>Steller Core AI</title><link rel="stylesheet" href="style.css"></head>
+<head>
+<title>Steller Core AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1>Steller Core</h1>
-<p>Local token based AI — no LLM.</p>
-<div id="chat"></div>
-<input id="input" placeholder="Ask Steller">
-<button onclick="ask()">Send</button>
+<div class="background"></div>
+<main class="container">
+    <header>
+        <h1>Steller <span>Core</span></h1>
+        <p>Local AI intelligence • Token Brain • Private Processing</p>
+    </header>
+
+    <section id="chat" class="chat">
+        <div class="message ai">Hello, I am Steller Core. Ask me anything.</div>
+    </section>
+
+    <div class="input-box">
+        <input id="input" placeholder="Message Steller...">
+        <button onclick="ask()">Send</button>
+    </div>
+</main>
 <script src="app.js"></script>
 </body>
 </html>
